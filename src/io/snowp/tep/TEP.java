@@ -14,9 +14,9 @@ public class TEP
 {
     public static final String version = "0.1.1";
 
-    boolean exit = false;
+    private boolean exit = false;
 
-    TEPUI ui;
+    private TEPUI ui;
 
     public TEP()
     {
