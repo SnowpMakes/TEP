@@ -28,7 +28,7 @@ public class TEP
         this.ui.addElement(new SimpleUIElement(0, (PrintStream printStream) -> {
             printStream.print("Content will go here");
         }));
-        this.ui.addElement(new SimpleUIElement(0, (PrintStream printStream) -> {
+        this.ui.addElement(new SimpleUIElement(1, (PrintStream printStream) -> {
             printStream.print("Press ctrl+C to exit.");
         }));
     }
