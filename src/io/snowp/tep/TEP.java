@@ -39,6 +39,7 @@ public class TEP
     public void run()
     {
         this.startup();
+        this.ui.repaint(); // TODO: Remove this function call when loop is implemented.
         while (!this.exit)
         {
             this.loop();
