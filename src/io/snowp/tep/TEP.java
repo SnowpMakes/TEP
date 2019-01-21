@@ -56,7 +56,7 @@ public class TEP
 
     private void loop()
     {
-        // TODO: Create loop code. As the commit you are looking at at the moment only is for the creation of the rendering system, this function will actually be coded later on.
+        // TODO: Create loop code. As the commit you are looking at at the moment only is for the creation of the rendering system and other stuff, this function will actually be coded later on.
     }
 
     public void exit()
