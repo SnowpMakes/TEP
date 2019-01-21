@@ -12,6 +12,7 @@ import java.io.PrintStream;
  */
 public class TEP
 {
+    private static TEP me = null;
     public static final String version = "0.1.1";
 
     private boolean exit = false;
@@ -20,6 +21,7 @@ public class TEP
 
     public TEP()
     {
+        if(me == null) me = this;
         ui = new TEPUI();
     }
 
@@ -50,4 +52,6 @@ public class TEP
     {
         // TODO: Create loop code. As the commit you are looking at at the moment only is for the creation of the rendering system, this function will actually be coded later on.
     }
+
+    public static TEP getTep() { return me; }
 }
