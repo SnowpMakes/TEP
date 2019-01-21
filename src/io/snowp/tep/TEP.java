@@ -16,6 +16,7 @@ public class TEP
     public static final String version = "0.1.1";
 
     private boolean exit = false;
+    private boolean running = false;
 
     private TEPUI ui;
 
@@ -40,18 +41,34 @@ public class TEP
      */
     public void run()
     {
+        this.running = true;
         this.startup();
         this.ui.repaint(); // TODO: Remove this function call when loop is implemented.
         while (!this.exit)
         {
             this.loop();
         }
+        running = false;
     }
 
     private void loop()
     {
         // TODO: Create loop code. As the commit you are looking at at the moment only is for the creation of the rendering system, this function will actually be coded later on.
     }
+
+    public void exit()
+    {
+        this.exit = true;
+        while(this.running)
+        {
+            try
+            {
+                Thread.sleep(20);
+            } catch (InterruptedException e) {}
+        }
+    }
+
+    public boolean getRunning() { return this.running; }
 
     public static TEP getTep() { return me; }
 }
