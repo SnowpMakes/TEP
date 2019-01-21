@@ -1,5 +1,6 @@
 package io.snowp.tep;
 
+import io.snowp.tep.errors.ErrorReporter;
 import io.snowp.tep.ui.SimpleUIElement;
 import io.snowp.tep.ui.TEPUI;
 
@@ -19,11 +20,13 @@ public class TEP
     private boolean running = false;
 
     private TEPUI ui;
+    private ErrorReporter errorReporter;
 
     public TEP()
     {
         if(me == null) me = this;
         ui = new TEPUI();
+        errorReporter = new ErrorReporter();
     }
 
     private void startup()
@@ -68,6 +71,7 @@ public class TEP
         }
     }
 
+    public ErrorReporter getErrorReporter() { return this.errorReporter; }
     public boolean getRunning() { return this.running; }
 
     public static TEP getTep() { return me; }
