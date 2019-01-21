@@ -20,7 +20,7 @@ public class TEPLaunch
             mainTep.run();
         } catch (Throwable e)
         {
-            // TODO: Will be created when the error reporting class has been created.
+            mainTep.getErrorReporter().report("", true);
         }
     }
 }
