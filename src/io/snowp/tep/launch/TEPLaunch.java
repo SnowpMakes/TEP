@@ -1,6 +1,7 @@
 package io.snowp.tep.launch;
 
 import io.snowp.tep.TEP;
+import io.snowp.tep.arguments.ArgumentParser;
 
 /**
  * The class holding the {@code public static void main(String[] args)} function
@@ -13,6 +14,9 @@ public class TEPLaunch
     public static void main(String[] args)
     {
         System.out.println("TEP " + TEP.version + ". Created by Snowp.");
+
+        // TODO: Implement later:
+        //ArgumentParser.parse(args);
 
         TEP mainTep = new TEP();
         try
