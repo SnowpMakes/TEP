@@ -1,7 +1,6 @@
 package io.snowp.tep.launch;
 
 import io.snowp.tep.TEP;
-import io.snowp.tep.arguments.ArgumentParser;
 
 /**
  * The class holding the {@code public static void main(String[] args)} function
